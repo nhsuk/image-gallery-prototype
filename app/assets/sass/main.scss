@@ -7,3 +7,188 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+.nhsuk-gallery-image-thumbnail {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.nhsuk-gallery-image-thumbnail_img {
+    pointer-events: none;
+    width:180px;
+    height: auto;
+    @media (max-width: 450px) {
+        width:90px;
+    }
+}
+.nhsuk-gallery-wrapper {
+    background-color: white;
+}
+
+.nhsuk-gallery-wrapper-proto-4 {
+    background-color: white;
+    position: relative;
+    height: auto;
+}
+
+.nhsuk-image-proto-4__caption {
+    @include nhsuk-typography-responsive(16);
+    padding: nhsuk-spacing(3);
+    padding-bottom: 0;
+}
+
+.nhsuk-gallery-image-proto-4 {
+    background-color: $color_nhsuk-white;
+    //border: 5px solid transparent; //TODO is this the only way to stop the content from popping on focus?
+
+    @include nhsuk-responsive-margin(0, 'bottom');
+    @include nhsuk-responsive-margin(0, 'top');
+    margin-left: 0; /* [1] */
+    margin-right: 0; /* [1] */
+    @include mq($media-type: print) {
+        width: 50%; /* [3] */
+    }
+
+    & + .nhsuk-gallery-image {
+        @include nhsuk-responsive-margin(0, 'top'); /* [4] */
+    }
+}
+
+.nhsuk-gallery-image-proto-4:focus {
+   /* 
+    border: 5px solid $nhsuk-focus-color;
+    outline: 5px solid $nhsuk-focus-text-color;
+    outline-offset: -10px;
+    margin: 0;  */
+    border: 0;
+    outline: 0;
+}
+
+.nhsuk-gallery-image-thumbnail_list {
+    padding-left: nhsuk-spacing(3);
+    padding-bottom: nhsuk-spacing(3);
+
+    @media (max-width: 48.0625em) {
+        padding-left: nhsuk-spacing(2);
+        padding-bottom: nhsuk-spacing(2);
+    }
+}
+
+ul.nhsuk-gallery-image-thumbnail_list li {
+    display: inline-block;
+    width: 32%;
+}
+
+.nhsuk-gallery-image-thumbnail_img:hover {
+    cursor: pointer;
+}
+.nhsuk-gallery-button{
+    margin: 2px;
+    border: 5px solid transparent;
+    cursor: pointer;
+}
+.nhsuk-gallery-button-tab {
+    margin: 5px;
+    border: 5px solid transparent;
+    cursor: pointer;
+}
+
+.nhsuk-gallery-button:focus, .nhsuk-gallery-button-tab:focus {
+    border: 5px solid $nhsuk-focus-color;
+    outline: 5px solid $nhsuk-focus-text-color;
+    outline-offset: -10px;
+    margin: 0;
+}
+
+// can use [role="tabpanel"]:focus when not using multiple prototypes
+
+
+.nhsuk-gallery-image-thumbnail_selected {
+    outline: 5px solid $color_nhsuk-blue;
+    outline-offset: -5px;
+}
+
+
+/* ==========================================================================
+   COMPONENTS / #IMAGES
+   ========================================================================== */
+/**
+ * 1. Overrides default browser margin values.
+ * 3. Avoid image printing full width of a page.
+ * 4. Removes top margin from subsequent nhsuk-image.
+ */
+.nhsuk-gallery-image {
+    background-color: $color_nhsuk-white;
+
+    @include nhsuk-responsive-margin(0, 'bottom');
+    @include nhsuk-responsive-margin(6, 'top');
+    margin-left: 0; /* [1] */
+    margin-right: 0; /* [1] */
+
+    @include mq($media-type: print) {
+        width: 50%; /* [3] */
+    }
+
+    & + .nhsuk-gallery-image {
+        @include nhsuk-responsive-margin(0, 'top'); /* [4] */
+    }
+}
+
+.nhsuk-gallery-button, .nhsuk-gallery-button-tab {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.nhsuk-image__caption {
+    @include nhsuk-typography-responsive(16);
+    padding-left: nhsuk-spacing(3);
+    padding-bottom: 0;
+}
+.nhsuk-image__caption_link{
+    margin-bottom: nhsuk-spacing(2)
+}
+#nhsuk-gallery-caption-target{
+    margin-bottom: nhsuk-spacing(3);
+}
+.nhsuk-image-prototype {
+    background-color: black;
+    color: white;
+
+    @include nhsuk-responsive-margin(0, 'bottom');
+    @include nhsuk-responsive-margin(6, 'top');
+    margin-left: 0; /* [1] */
+    margin-right: 0; /* [1] */
+
+    @include mq($media-type: print) {
+        width: 50%; /* [3] */
+    }
+
+    & + .nhsuk-gallery-image {
+        @include nhsuk-responsive-margin(0, 'top'); /* [4] */
+    }
+}
+
+.nhsuk-image-prototype_a:link {
+    color: white;
+}
+
+.nhsuk-image-prototype_a:visited {
+    color: white;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.child {
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.child-2 {
+    padding: 10px;
+    padding-top: 0;
+    grid-area: 2 / 1 / 2 / 2;
+    margin-bottom: 0;
+}

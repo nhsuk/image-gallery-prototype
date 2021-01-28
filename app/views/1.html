@@ -42,38 +42,101 @@
 <h4>1. Small spots appear</h4>
 <p>The spots:</p>
 <ul class="nhsuk-list nhsuk-list--bullet">
-  <li>are flat at first but soon become raised</li>
   <li>can be anywhere on the body and might spread or stay in a small area</li>
   <li>may be red, pink, the same colour or darker than surrounding skin depending on your skin tone</li>
   <li>may be harder to see on brown and black skin</li>
 </ul>
 
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="https://nhsuk-prototype-kit.azurewebsites.net/images/placeholder-image-16-9.jpg" alt="">
-  <figcaption class="nhsuk-image__caption">
-    Gallery component here
-  </figcaption>
-</figure>
+
+
+<div class="nhsuk-gallery-wrapper" role="region" aria-label="Image gallery">
+    <figure class="nhsuk-gallery-image" role="group">
+        <img id="nhsuk-galley-image-target" class="nhsuk-image__img" src="/images/S1-A.png" alt="itchy, red, eyes image 1">
+        <figcaption class="nhsuk-image__caption">
+            <p class="nhsuk-image__caption_link">
+                <a id="nhsuk-gallery-unique-description-target" href="image1">Image description</a>
+            </p>
+            <p id="nhsuk-gallery-caption-target">
+                itchy, red, eyes image 1
+            </p>
+        </figcaption>
+    </figure>
+    <ul class="nhsuk-list nhsuk-gallery-image-thumbnail_list">
+        <li>
+            <button role="button" type="button" class="nhsuk-gallery-button nhsuk-gallery-image-thumbnail_selected" aria-pressed="true">
+                <img class="nhsuk-gallery-image-thumbnail" src="/images/S1-A.png" alt="Stage 1" data-descriptionPage="/LD/S1-A" width="150" height="100">
+            </button>
+        </li>
+        <li>
+            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
+                <img class="nhsuk-gallery-image-thumbnail" src="/images/S1-B.png" alt="Stage 1" width="150" height="100" data-descriptionPage="image2">
+            </button>
+        </li>
+        <li>
+            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
+              <img class="nhsuk-gallery-image-thumbnail" src="/images/S1-C.png" alt="Stage 1" width="150" height="100" data-descriptionPage="image3">
+            </button>
+            </li>
+    </ul>
+</div>
+
+
 
 <h4>2. The spots become blisters</h4>
 <p>The spots fill with fluid and become blisters. The blisters are very itchy and may burst.  </p>
 
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="https://nhsuk-prototype-kit.azurewebsites.net/images/placeholder-image-16-9.jpg" alt="">
-  <figcaption class="nhsuk-image__caption">
-    Gallery component here
-  </figcaption>
+<figure class="nhsuk-image-prototype">
+    <img id="nhsuk-galley-image-target" class="nhsuk-image__img" src="/images/S2-A.png" alt="image 1">
+    <figcaption class="nhsuk-image__caption">
+        <p>
+            Stage 2
+        </p>
+        <p>
+            <a class="nhsuk-image-prototype_a" href="#">Image description</a>
+        </p>
+
+    </figcaption>
 </figure>
 
 <h4>3. The blisters become scabs</h4>
 <p>The spots scab over. Some are flaky while others are weepy.</p>
 
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="https://nhsuk-prototype-kit.azurewebsites.net/images/placeholder-image-16-9.jpg" alt="">
-  <figcaption class="nhsuk-image__caption">
-    Gallery component here
-  </figcaption>
-</figure>
+<div class="nhsuk-gallery-wrapper" role="region" aria-label="Image gallery">
+    <figure class="nhsuk-gallery-image" role="group">
+        <img id="nhsuk-galley-image-target" class="nhsuk-image__img" src="/images/S3-A.png" alt="Stage 3">
+        <figcaption class="nhsuk-image__caption">
+            <p class="nhsuk-image__caption_link">
+                <a id="nhsuk-gallery-unique-description-target" href="image1">Image description</a>
+            </p>
+            <p id="nhsuk-gallery-caption-target">
+                Stage 3
+            </p>
+        </figcaption>
+    </figure>
+    <ul class="nhsuk-list nhsuk-gallery-image-thumbnail_list">
+        <li>
+            <button role="button" type="button" class="nhsuk-gallery-button nhsuk-gallery-image-thumbnail_selected" aria-pressed="true">
+                <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-A.png" alt="Stage 3" width="150" height="100" data-descriptionPage="image1">
+            </button>
+        </li>
+        <li>
+            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
+                <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-B.png" alt="Stage 3" width="150" height="100" data-descriptionPage="image2">
+            </button>
+        </li>
+        <li>
+            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
+              <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-C.png" alt="Stage 3" width="150" height="100" data-descriptionPage="image3">
+            </button>
+            </li>
+        <li>
+                <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
+                  <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-D.png" alt="Stage 3" width="150" height="100" data-descriptionPage="image3">
+                </button>
+                </li>
+    </ul>
+</div>
+
 
 <p>New spots might appear while others are becoming blisters or forming a scab.</p>
 
