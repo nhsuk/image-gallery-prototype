@@ -145,6 +145,13 @@ ul.nhsuk-gallery-image-thumbnail_list li {
     padding-left: nhsuk-spacing(3);
     padding-bottom: 0;
 }
+.nhsuk-image__caption_a{
+    @include nhsuk-typography-responsive(16);
+    padding-top: nhsuk-spacing(3);
+    padding-left: nhsuk-spacing(3);
+    padding-bottom: nhsuk-spacing(3);
+}
+
 .nhsuk-image__caption_link{
     margin-bottom: nhsuk-spacing(2)
 }
@@ -152,10 +159,10 @@ ul.nhsuk-gallery-image-thumbnail_list li {
     margin-bottom: nhsuk-spacing(3);
 }
 .nhsuk-image-prototype {
-    background-color: black;
+    background-color: #212B32;
     color: white;
 
-    @include nhsuk-responsive-margin(0, 'bottom');
+    @include nhsuk-responsive-margin(6, 'bottom');
     @include nhsuk-responsive-margin(6, 'top');
     margin-left: 0; /* [1] */
     margin-right: 0; /* [1] */
@@ -167,6 +174,10 @@ ul.nhsuk-gallery-image-thumbnail_list li {
     & + .nhsuk-gallery-image {
         @include nhsuk-responsive-margin(0, 'top'); /* [4] */
     }
+}
+
+.nhsuk-image-link-alt {
+    margin-bottom: nhsuk-spacing(2);
 }
 
 .nhsuk-image-prototype_a:link {
