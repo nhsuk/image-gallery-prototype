@@ -15,7 +15,7 @@
 }
 .nhsuk-gallery-image-thumbnail_img {
     pointer-events: none;
-    width:180px;
+    width: 100px;
     height: auto;
     @media (max-width: 450px) {
         width:90px;
@@ -23,6 +23,10 @@
 }
 .nhsuk-gallery-wrapper {
     background-color: white;
+    width: 66%;
+    @media (max-width: 48.0625em) {
+        width: 100%;
+    }
 }
 
 .nhsuk-gallery-wrapper-proto-4 {
@@ -66,10 +70,12 @@
 
 .nhsuk-gallery-image-thumbnail_list {
     padding-left: nhsuk-spacing(3);
+    padding-right: nhsuk-spacing(3);
     padding-bottom: nhsuk-spacing(3);
 
     @media (max-width: 48.0625em) {
         padding-left: nhsuk-spacing(2);
+        padding-right: nhsuk-spacing(2);
         padding-bottom: nhsuk-spacing(2);
     }
 }
@@ -161,6 +167,11 @@ ul.nhsuk-gallery-image-thumbnail_list li {
 .nhsuk-image-prototype {
     background-color: #212B32;
     color: white;
+
+    width: 66%;
+    @media (max-width: 48.0625em) {
+        width: 100%;
+    }
 
     @include nhsuk-responsive-margin(6, 'bottom');
     @include nhsuk-responsive-margin(6, 'top');

@@ -1,12 +1,13 @@
 // ES6 or Vanilla JavaScript
 
 
-/* functions for prototype 1 and 2 */
-var buttons = document.querySelectorAll(".nhsuk-gallery-button");
+/* functions for gallery 1*/
+var firstGallery = document.querySelector(".first");
+var firstButtons =  firstGallery.querySelectorAll(".nhsuk-gallery-button");
 
 function swapSelected(currentSelected) {
 
-    buttons.forEach(function (item) {
+    firstButtons.forEach(function (item) {
         
         if (currentSelected == item) {
 
@@ -23,75 +24,24 @@ function swapSelected(currentSelected) {
     });
 }
 
-buttons.forEach(item =>
+firstButtons.forEach(item =>
 
     item.addEventListener("click", function (e) {
 
         swapSelected(e.target);
 
-        updateWithSelectedImage(e.target.firstChild.nextSibling);
+        updateWithSelectedImage(e.target.firstChild.nextSibling, firstGallery);
     })
 );
-
-/*
-thumbnails.forEach(item =>
-
-    item.addEventListener("keyup", function (e) {
-       
-        
-        let enterKey = 13;
-
-        if (e.keyCode == enterKey) {
-
-            swapSelected(e.target);
-
-            updateWithSelectedImage(e.target);
-        } 
-    })
-); */
-
-
-/* functions for prototype 3 */
-//var buttonTabs = document.querySelectorAll(".nhsuk-gallery-button-tab");
-/*
-function swapSelectedTabs(currentSelected) {
-
-    buttonTabs.forEach(function (item) {
-
-        if (currentSelected == item) {
-
-            currentSelected.classList.add("nhsuk-gallery-image-thumbnail_selected");
-
-            currentSelected.setAttribute("aria-selected", "true");
-
-        } else {
-
-            item.classList.remove("nhsuk-gallery-image-thumbnail_selected");
-
-            item.setAttribute("aria-selected", "false");
-        }
-    });
-}
-
-buttonTabs.forEach(item =>
-
-    item.addEventListener("click", function (e) {
-
-        swapSelectedTabs(e.target);
-
-        updateWithSelectedImage(e.target.firstChild.nextSibling);
-    })
-);
-*/
 
 /* common functions */
-function updateWithSelectedImage(selectedImageElem) {
+function updateWithSelectedImage(selectedImageElem, div) {
 
-    let targetElem = document.querySelector("#nhsuk-galley-image-target");
+    let targetElem = div.querySelector(".nhsuk-galley-image-target");
 
-    let captionTargetElem = document.querySelector("#nhsuk-gallery-caption-target");
+    let captionTargetElem = div.querySelector(".nhsuk-gallery-caption-target");
 
-    let descriptionLink = document.querySelector("#nhsuk-gallery-unique-description-target");
+    let descriptionLink = div.querySelector(".nhsuk-gallery-unique-description-target");
 
     targetElem.src = selectedImageElem.src;
 
@@ -105,6 +55,42 @@ function updateWithSelectedImage(selectedImageElem) {
     descriptionLink.href = selectedImageElem.dataset.descriptionpage;
 
 }
+
+
+/* functions for gallery 2*/
+var secondGallery = document.querySelector(".second");
+var secondButtons =  secondGallery.querySelectorAll(".nhsuk-gallery-button");
+
+function swapSelected2(currentSelected) {
+
+    secondButtons.forEach(function (item) {
+        
+        if (currentSelected == item) {
+
+            currentSelected.classList.add("nhsuk-gallery-image-thumbnail_selected");
+
+            currentSelected.setAttribute("aria-pressed", "true");
+
+        } else {
+
+            item.classList.remove("nhsuk-gallery-image-thumbnail_selected");
+
+            item.setAttribute("aria-pressed", "false");
+        }
+    });
+}
+
+secondButtons.forEach(item =>
+
+    item.addEventListener("click", function (e) {
+
+        swapSelected2(e.target);
+
+        updateWithSelectedImage(e.target.firstChild.nextSibling, secondGallery);
+    })
+);
+
+
 
 /*
 *   This content is licensed according to the W3C Software License at
