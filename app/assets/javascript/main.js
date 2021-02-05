@@ -96,8 +96,8 @@ secondButtons.forEach(item =>
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 */
-(function () {
-    var tablist = document.querySelectorAll('[role="tablist"]')[0];
+function tabsGallery(galleryDiv) {
+    var tablist = galleryDiv.querySelectorAll('[role="tablist"]')[0];
     var tabs;
     var panels;
     var delay = determineDelay();
@@ -105,8 +105,8 @@ secondButtons.forEach(item =>
     generateArrays();
 
     function generateArrays() {
-        tabs = document.querySelectorAll('[role="tab"]');
-        panels = document.querySelectorAll('[role="tabpanel"]');
+        tabs = galleryDiv.querySelectorAll('[role="tab"]');
+        panels = galleryDiv.querySelectorAll('[role="tabpanel"]');
     };
 
     // For easy reference
@@ -250,10 +250,11 @@ secondButtons.forEach(item =>
         tab.classList.add("nhsuk-gallery-image-thumbnail_selected");
 
         // Get the value of aria-controls (which is an ID)
-        var controls = tab.getAttribute('aria-controls');
+        var controlsID = tab.getAttribute('aria-controls');
+        var imageID = "#".concat(controlsID);
 
         // Remove hidden attribute from tab panel to make it visible
-        document.getElementById(controls).removeAttribute('hidden');
+        galleryDiv.querySelector(imageID).removeAttribute('hidden');
 
         // Set focus when required
         if (setFocus) {
@@ -322,10 +323,12 @@ secondButtons.forEach(item =>
 
     // Only activate tab on focus if it still has focus after the delay
     function checkTabFocus(target) {
-        let focused = document.activeElement;
+        let focused = galleryDiv.activeElement;
 
         if (target === focused) {
             activateTab(target, false);
         };
     };
-})();
+}
+tabsGallery(firstGallery);
+tabsGallery(secondGallery);

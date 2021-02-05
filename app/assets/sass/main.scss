@@ -127,7 +127,7 @@ ul.nhsuk-gallery-image-thumbnail_list li {
     background-color: $color_nhsuk-white;
 
     @include nhsuk-responsive-margin(0, 'bottom');
-    @include nhsuk-responsive-margin(6, 'top');
+    @include nhsuk-responsive-margin(0, 'top');
     margin-left: 0; /* [1] */
     margin-right: 0; /* [1] */
 
@@ -202,6 +202,7 @@ ul.nhsuk-gallery-image-thumbnail_list li {
 .parent {
     display: grid;
     grid-template-columns: 100%;
+    margin-bottom: nhsuk-spacing(5);;
 }
 
 .child {
