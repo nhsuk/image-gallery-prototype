@@ -48,79 +48,119 @@
 
 <h4>1. Small spots appear</h4>
 
-<div class="nhsuk-gallery-wrapper first" role="region" aria-label="Image gallery">
-    <figure class="nhsuk-gallery-image" role="group">
-        <img class="nhsuk-galley-image-target nhsuk-image__img" src="/images/S1-A.png" alt="itchy, red, eyes image 1">
-        <figcaption class="nhsuk-image__caption">
-            <p class="nhsuk-image__caption_link">
-                <a class="nhsuk-gallery-unique-description-target" href="/LD/S1-A"></a>
-            </p>
-            <p class="nhsuk-gallery-caption-target">
-                <a#>
-            </p>
+<!-- Hey Cameron, make sure it says first or second in this class below -->
+<div class="nhsuk-gallery-wrapper parent first" role="region" aria-label="Image gallery">
+    <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
+    <figure id="gallery-prototype-image-1" class="Nhsuk-gallery-image-proto-4" role="tabpanel">
+        <img class="nhsuk-image__img" src="/images/S1-A.png" alt="Stage 1 of the chickenpox rash on white skin. Spots are red and some have a bump in the centre. The skin surrounding most spots looks red">
+        <figcaption class="nhsuk-image-proto-4__caption">
+
         </figcaption>
     </figure>
-    <ul class="nhsuk-list nhsuk-gallery-image-thumbnail_list">
-        <li>
-            <button role="button" type="button" class="nhsuk-gallery-button nhsuk-gallery-image-thumbnail_selected" aria-pressed="true">
-                <img class="nhsuk-gallery-image-thumbnail" src="/images/S1-A.png" alt="" data-descriptionPage="/LD/S1-A" width="150" height="100">
-            </button>
-        </li>
-        <li>
-            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
-                <img class="nhsuk-gallery-image-thumbnail" src="/images/S1-B.png" alt="" width="150" height="100" data-descriptionPage="/LD/S1-B">
-            </button>
-        </li>
-        <li>
-            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
-              <img class="nhsuk-gallery-image-thumbnail" src="/images/S1-C.png" alt="" width="150" height="100" data-descriptionPage="/LD/S1-C">
-            </button>
-            </li>
-    </ul>
+
+    <figure id="gallery-prototype-image-2" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" src="/images/S1-B.png" alt="Stage 1 of the chickenpox rash on light brown skin. Spots are small round bumps similar in colour to surrounding skin">
+        <figcaption class="nhsuk-image-proto-4__caption">
+
+
+        </figcaption>
+    </figure>
+
+    <figure id="gallery-prototype-image-3" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" src="/images/S1-C.png" alt="Stage 1 of the chickenpox rash on light brown skin. The spots are raised red bumps. The skin surrounding most spots looks red">
+        <figcaption class="nhsuk-image-proto-4__caption">
+
+
+        </figcaption>
+    </figure>
+
+
+    <!-- Just need to make sure the 'aria-controls' section matches the 'id' of the figures above -->
+    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list" aria-label="Image gallery">
+
+        <button role="tab" type="button" class="nhsuk-gallery-button-tab nhsuk-gallery-image-thumbnail_selected" aria-selected="true" aria-controls="gallery-prototype-image-1">
+            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-A.png" alt="Stage 1 of the chickenpox rash on white skin. Spots are red and some have a bump in the centre. The skin surrounding most spots looks red " width="150" height="100">
+        </button>
+
+        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
+            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-B.png" alt="Stage 1 of the chickenpox rash on light brown skin. Spots are small round bumps similar in colour to surrounding skin" width="150" height="100">
+        </button>
+
+        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
+            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-C.png" alt="Stage 1 of the chickenpox rash on light brown skin. The spots are raised red bumps. The skin surrounding most spots looks red" width="150" height="100">
+        </button>
+    </div>
 </div>
 
 <h4>2. The spots become blisters</h4>
 
 <figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="/images/S2-A.png" alt="">
+  <img class="nhsuk-image__img" src="/images/S2-A.png" alt="Stage 2 of the chickenpox rash on light brown skin. Most spots have become raised pink blisters ranging in size from 3mm to 1cm">
 </figure>
 
 <h4>3. The blisters become scabs</h4>
 
-<div class="nhsuk-gallery-wrapper second" role="region" aria-label="Image gallery">
-    <figure class="nhsuk-gallery-image" role="group">
-        <img class="nhsuk-galley-image-target nhsuk-image__img" src="/images/S3-A.png" alt="Stage 3">
-        <figcaption class="nhsuk-image__caption">
-            <p class="nhsuk-image__caption_link">
-                <a class="nhsuk-gallery-unique-description-target" href="/LD/S3-A">Image description</a>
-            </p>
-            <p class="nhsuk-gallery-caption-target">
+<!-- Hey Cameron, make sure it says first or second in this class below -->
+<div class="nhsuk-gallery-wrapper parent second" role="region" aria-label="Image gallery">
 
+  <div role="tablist" class="nhsuk-list child child-2" aria-label="Image gallery">
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab nhsuk-gallery-image-thumbnail_selected" aria-selected="true" aria-controls="gallery-prototype-image-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. Spots are red and most have a yellow and pink scab. Some scabs are flaky, others have fluid under them." width="150" height="100">
+      </button>
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-B.png" alt="Stage 3 of chickenpox on the chest and arm of a person with light brown skin. Most spots are flat with a dark red scab." width="150" height="100">
+      </button>
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-C.png" alt="Stage 3 of the chickenpox rash on medium brown skin. Most spots have scabs, which are pink, purple or grey." width="150" height="100">
+      </button>
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-4" tabindex="-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-D.png" alt="Stage 3 of the chickenpox rash on dark brown skin. Most spots have raised scabs, which are darker than surrounding skin or grey. " width="150" height="100">
+      </button>
+  </div>
+    <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
+    <figure id="gallery-prototype-image-1" class="Nhsuk-gallery-image-proto-4" role="tabpanel">
+        <img class="nhsuk-image__img" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. Spots are red and most have a yellow and pink scab. Some scabs are flaky, others have fluid under them.">
+        <figcaption class="nhsuk-image-proto-4__caption">
+            <p class="nhsuk-image__caption_link">
+                <a href="/LD/S3-A">Image 1 description</a>
             </p>
         </figcaption>
     </figure>
-    <ul class="nhsuk-list nhsuk-gallery-image-thumbnail_list">
-        <li>
-            <button role="button" type="button" class="nhsuk-gallery-button nhsuk-gallery-image-thumbnail_selected" aria-pressed="true">
-                <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-A.png" alt="" width="150" height="100" data-descriptionPage="/LD/S3-A">
-            </button>
-        </li>
-        <li>
-            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
-                <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-B.png" alt="" width="150" height="100" data-descriptionPage="/LD/S3-B">
-            </button>
-        </li>
-        <li>
-            <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
-              <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-C.png" alt="" width="150" height="100" data-descriptionPage="/LD/S3-C">
-            </button>
-            </li>
-        <li>
-                <button type="button" class="nhsuk-gallery-button" aria-pressed="false">
-                  <img class="nhsuk-gallery-image-thumbnail" src="/images/S3-D.png" alt="" width="150" height="100" data-descriptionPage="/LD/S3-D">
-                </button>
-                </li>
-    </ul>
+
+    <figure id="gallery-prototype-image-2" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" src="/images/S3-B.png" alt="Stage 3 of chickenpox on the chest and arm of a person with light brown skin. Most spots are flat with a dark red scab.">
+        <figcaption class="nhsuk-image-proto-4__caption">
+            <p class="nhsuk-image__caption_link">
+                <a href="/LD/S3-B">Image 2 description</a>
+            </p>
+        </figcaption>
+    </figure>
+
+    <figure id="gallery-prototype-image-3" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" src="/images/S3-C.png" alt="Stage 3 of the chickenpox rash on medium brown skin. Most spots have scabs, which are pink, purple or grey.">
+        <figcaption class="nhsuk-image-proto-4__caption">
+            <p class="nhsuk-image__caption_link">
+                <a href="/LD/S3-C">Image 3 description</a>
+            </p>
+        </figcaption>
+    </figure>
+
+    <figure id="gallery-prototype-image-4" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" src="/images/S3-D.png" alt="Stage 3 of the chickenpox rash on dark brown skin. Most spots have raised scabs, which are darker than surrounding skin or grey.">
+        <figcaption class="nhsuk-image-proto-4__caption">
+            <p class="nhsuk-image__caption_link">
+                <a href="/LD/S3-D">Image 4 description</a>
+            </p>
+
+        </figcaption>
+    </figure>
+
+    <!-- Just need to make sure the 'aria-controls' section matches the 'id' of the figures above -->
+
 </div>
 
 

@@ -52,6 +52,11 @@ function updateWithSelectedImage(selectedImageElem, div) {
         captionTargetElem.textContent = selectedImageElem.alt;
     }
 
+    if (selectedImageElem.dataset.descriptionname != null) {
+        descriptionLink.textContent = selectedImageElem.dataset.descriptionname;
+    }
+
+
     descriptionLink.href = selectedImageElem.dataset.descriptionpage;
 
 }
