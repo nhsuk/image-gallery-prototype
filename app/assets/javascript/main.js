@@ -223,6 +223,7 @@ function tabsGallery(galleryDiv) {
             if (target.index !== undefined) {
                 if (tabs[target.index + direction[pressed]]) {
                     tabs[target.index + direction[pressed]].focus();
+                    activateTab(tabs[target.index + direction[pressed]]);
                 }
                 else if (pressed === keys.left || pressed === keys.up) {
                     focusLastTab();
@@ -232,6 +233,18 @@ function tabsGallery(galleryDiv) {
                 };
             };
         };
+    };
+
+    // Make a guess
+    function focusFirstTab() {
+        tabs[0].focus();
+        activateTab(tabs[0]);
+    };
+
+    // Make a guess
+    function focusLastTab() {
+        tabs[tabs.length - 1].focus();
+        activateTab(tabs[tabs.length - 1]);
     };
 
     // Activates any given tab panel
@@ -274,16 +287,6 @@ function tabsGallery(galleryDiv) {
         for (let p = 0; p < panels.length; p++) {
             panels[p].setAttribute('hidden', 'hidden');
         };
-    };
-
-    // Make a guess
-    function focusFirstTab() {
-        tabs[0].focus();
-    };
-
-    // Make a guess
-    function focusLastTab() {
-        tabs[tabs.length - 1].focus();
     };
 
     // Determine whether there should be a delay
