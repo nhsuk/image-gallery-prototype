@@ -71,13 +71,12 @@
 .nhsuk-gallery-image-thumbnail_list {
     padding-left: nhsuk-spacing(3);
     padding-right: nhsuk-spacing(3);
-    padding-bottom: nhsuk-spacing(0);
-    margin-bottom: nhsuk-spacing(3);
+    padding-bottom: nhsuk-spacing(3);
 
     @media (max-width: 48.0625em) {
         padding-left: nhsuk-spacing(2);
         padding-right: nhsuk-spacing(2);
-        padding-bottom: nhsuk-spacing(0);
+        padding-bottom: nhsuk-spacing(2);
     }
 }
 
@@ -203,8 +202,7 @@ ul.nhsuk-gallery-image-thumbnail_list li {
 .parent {
     display: grid;
     grid-template-columns: 100%;
-    margin-bottom: nhsuk-spacing(5);
-    border: 1px solid $color_nhsuk-grey-4;
+    margin-bottom: nhsuk-spacing(5);;
 }
 
 .child {
