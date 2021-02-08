@@ -39,7 +39,7 @@ function updateWithSelectedImage(selectedImageElem, div) {
 
     let targetElem = div.querySelector(".nhsuk-galley-image-target");
 
-    let captionTargetElem = div.querySelector(".nhsuk-gallery-caption-target");
+    // let captionTargetElem = div.querySelector(".nhsuk-gallery-caption-target");
 
     let descriptionLink = div.querySelector(".nhsuk-gallery-unique-description-target");
 
@@ -48,9 +48,9 @@ function updateWithSelectedImage(selectedImageElem, div) {
     targetElem.alt = selectedImageElem.alt;
 
     // Needed because prototype 2 doesnt have the caption text
-    if (captionTargetElem != null) {
-        captionTargetElem.textContent = selectedImageElem.alt;
-    }
+    // if (captionTargetElem != null) {
+    //     captionTargetElem.textContent = selectedImageElem.alt;
+    // }
 
     if (selectedImageElem.dataset.descriptionname != null) {
         descriptionLink.textContent = selectedImageElem.dataset.descriptionname;
@@ -259,7 +259,7 @@ function tabsGallery(galleryDiv) {
         deactivateTabs();
 
         // Remove tabindex attribute
-        //tab.removeAttribute('tabindex');
+        tab.setAttribute('tabindex', '0');
 
         // Set the tab as selected
         tab.setAttribute('aria-selected', 'true');
@@ -283,7 +283,7 @@ function tabsGallery(galleryDiv) {
     // Deactivate all tabs and tab panels
     function deactivateTabs() {
         for (let t = 0; t < tabs.length; t++) {
-            //tabs[t].setAttribute('tabindex', '-1');
+            tabs[t].setAttribute('tabindex', '-1');
             tabs[t].setAttribute('aria-selected', 'false');
             tabs[t].removeEventListener('focus', focusEventHandler);
             tabs[t].classList.remove("nhsuk-gallery-image-thumbnail_selected");
