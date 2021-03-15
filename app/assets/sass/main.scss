@@ -21,6 +21,34 @@
         width:90px;
     }
 }
+
+.nhsuk-gallery-image-thumbnail_list {
+    padding-left: nhsuk-spacing(3);
+    padding-right: nhsuk-spacing(3);
+    margin-bottom: nhsuk-spacing(2);
+
+    @media (max-width: 48.0625em) {
+        padding-left: nhsuk-spacing(2);
+        padding-right: nhsuk-spacing(2);
+    }
+}
+
+.image-number{
+    pointer-events: none;
+    position: absolute;
+    bottom: 3px;
+    left: 78px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 1px;
+    color: $color_nhsuk-white;
+    background-color: $color_nhsuk-blue;
+    @media (max-width: 48.0625em) {
+        bottom: 3px;
+        left: 69px;
+    }
+}
+
 .nhsuk-gallery-wrapper {
     background-color: white;
     width: 66%;
@@ -29,19 +57,56 @@
     }
 }
 
-.nhsuk-gallery-wrapper-proto-4 {
-    background-color: white;
-    position: relative;
-    height: auto;
+.parent {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-bottom: nhsuk-spacing(5);
+    border: 1px solid #d8dde0;
 }
 
-.nhsuk-image-proto-4__caption {
-    @include nhsuk-typography-responsive(16);
+.child {
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.child-2 {
+    padding: 10px;
+    padding-top: 0;
+    grid-area: 2 / 1 / 2 / 2;
+    margin-bottom: 0;
+}
+
+.nhsuk-image-proto__caption {
     padding: nhsuk-spacing(3);
     padding-bottom: 0;
 }
 
-.nhsuk-gallery-image-proto-4 {
+.caption-text{
+    @include nhsuk-typography-responsive(16);
+    padding-bottom: nhsuk-spacing(3);
+}
+
+.nhsuk-details{
+    @include nhsuk-typography-responsive(16);
+}
+.nhsuk-details__summary {
+    padding-left: 20px;
+    &:before {
+      bottom: 0;
+      content: '';
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+  
+      @include govuk-shape-arrow($direction: right, $base: 12px);
+  
+    }
+}
+.nhsuk-details__content{
+    @include nhsuk-typography-responsive(16);
+}
+
+.nhsuk-gallery-image-proto {
     background-color: $color_nhsuk-white;
     //border: 5px solid transparent; //TODO is this the only way to stop the content from popping on focus?
 
@@ -58,7 +123,7 @@
     }
 }
 
-.nhsuk-gallery-image-proto-4:focus {
+.nhsuk-gallery-image-proto:focus {
    /* 
     border: 5px solid $nhsuk-focus-color;
     outline: 5px solid $nhsuk-focus-text-color;
@@ -68,38 +133,19 @@
     outline: 0;
 }
 
-.nhsuk-gallery-image-thumbnail_list {
-    padding-left: nhsuk-spacing(3);
-    padding-right: nhsuk-spacing(3);
-    padding-bottom: nhsuk-spacing(3);
-
-    @media (max-width: 48.0625em) {
-        padding-left: nhsuk-spacing(2);
-        padding-right: nhsuk-spacing(2);
-        padding-bottom: nhsuk-spacing(2);
-    }
-}
-
-ul.nhsuk-gallery-image-thumbnail_list li {
-    display: inline-block;
-    width: 32%;
-}
-
 .nhsuk-gallery-image-thumbnail_img:hover {
     cursor: pointer;
 }
-.nhsuk-gallery-button{
-    margin: 2px;
-    border: 5px solid transparent;
-    cursor: pointer;
-}
+
 .nhsuk-gallery-button-tab {
     margin: 5px;
     border: 5px solid transparent;
     cursor: pointer;
+    position: relative;
+    text-align: center;
 }
 
-.nhsuk-gallery-button:focus, .nhsuk-gallery-button-tab:focus {
+.nhsuk-gallery-button-tab:focus {
     border: 5px solid $nhsuk-focus-color;
     outline: 5px solid $nhsuk-focus-text-color;
     outline-offset: -10px;
@@ -140,52 +186,52 @@ ul.nhsuk-gallery-image-thumbnail_list li {
     }
 }
 
-.nhsuk-gallery-button, .nhsuk-gallery-button-tab {
+.nhsuk-gallery-button-tab {
     background: transparent;
     border: 0;
     padding: 0;
 }
 
-.nhsuk-image__caption {
-    @include nhsuk-typography-responsive(16);
-    padding-left: nhsuk-spacing(3);
-    padding-bottom: 0;
-}
-.nhsuk-image__caption_a{
-    @include nhsuk-typography-responsive(16);
-    padding-top: nhsuk-spacing(3);
-    padding-left: nhsuk-spacing(3);
-    padding-bottom: nhsuk-spacing(3);
-}
+// .nhsuk-image__caption {
+//     @include nhsuk-typography-responsive(16);
+//     padding-left: nhsuk-spacing(3);
+//     padding-bottom: 0;
+// }
+// .nhsuk-image__caption_a{
+//     @include nhsuk-typography-responsive(16);
+//     padding-top: nhsuk-spacing(3);
+//     padding-left: nhsuk-spacing(3);
+//     padding-bottom: nhsuk-spacing(3);
+// }
 
-.nhsuk-image__caption_link{
-    margin-bottom: nhsuk-spacing(2)
-}
-#nhsuk-gallery-caption-target{
-    margin-bottom: nhsuk-spacing(3);
-}
-.nhsuk-image-prototype {
-    background-color: #212B32;
-    color: white;
+// .nhsuk-image__caption_link{
+//     margin-bottom: nhsuk-spacing(2)
+// }
+// #nhsuk-gallery-caption-target{
+//     margin-bottom: nhsuk-spacing(3);
+// }
+// .nhsuk-image-prototype {
+//     background-color: #212B32;
+//     color: white;
 
-    width: 66%;
-    @media (max-width: 48.0625em) {
-        width: 100%;
-    }
+//     width: 66%;
+//     @media (max-width: 48.0625em) {
+//         width: 100%;
+//     }
 
-    @include nhsuk-responsive-margin(6, 'bottom');
-    @include nhsuk-responsive-margin(6, 'top');
-    margin-left: 0; /* [1] */
-    margin-right: 0; /* [1] */
+//     @include nhsuk-responsive-margin(6, 'bottom');
+//     @include nhsuk-responsive-margin(6, 'top');
+//     margin-left: 0; /* [1] */
+//     margin-right: 0; /* [1] */
 
-    @include mq($media-type: print) {
-        width: 50%; /* [3] */
-    }
+//     @include mq($media-type: print) {
+//         width: 50%; /* [3] */
+//     }
 
-    & + .nhsuk-gallery-image {
-        @include nhsuk-responsive-margin(0, 'top'); /* [4] */
-    }
-}
+//     & + .nhsuk-gallery-image {
+//         @include nhsuk-responsive-margin(0, 'top'); /* [4] */
+//     }
+// }
 
 .nhsuk-image-link-alt {
     margin-bottom: nhsuk-spacing(2);
@@ -197,21 +243,4 @@ ul.nhsuk-gallery-image-thumbnail_list li {
 
 .nhsuk-image-prototype_a:visited {
     color: white;
-}
-
-.parent {
-    display: grid;
-    grid-template-columns: 100%;
-    margin-bottom: nhsuk-spacing(5);;
-}
-
-.child {
-    grid-area: 1 / 1 / 1 / 1;
-}
-
-.child-2 {
-    padding: 10px;
-    padding-top: 0;
-    grid-area: 2 / 1 / 2 / 2;
-    margin-bottom: 0;
 }

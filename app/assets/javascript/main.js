@@ -114,6 +114,14 @@ function tabsGallery(galleryDiv) {
         panels = galleryDiv.querySelectorAll('[role="tabpanel"]');
     };
 
+    function randomSelect(){
+        var len = tabs.length;
+        var ran = Math.floor(Math.random() * len);
+        activateTab(tabs[ran])
+    };
+
+    randomSelect();
+
     // For easy reference
     var keys = {
         end: 35,

@@ -4,6 +4,8 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
+{% from 'details/macro.njk' import details %}
+
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -49,45 +51,83 @@
 <!-- Hey Cameron, make sure it says first or second in this class below -->
 <div class="nhsuk-gallery-wrapper parent first" role="region" aria-label="Image gallery">
     <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
-    <figure id="gallery-prototype-image-1" class="Nhsuk-gallery-image-proto-4" role="tabpanel">
+    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2" aria-label="Image gallery">
+
+        <button role="tab" type="button" class="nhsuk-gallery-button-tab nhsuk-gallery-image-thumbnail_selected" aria-selected="true" aria-controls="gallery-prototype-image-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-A.png" alt="Stage 1 of the chickenpox rash on white skin. Spots are red and some have a bump in the centre. The skin surrounding most spots looks red " width="150" height="100">
+          <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">1</div>
+        </button>
+
+        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-B.png" alt="Stage 1 of the chickenpox rash on light brown skin. Spots are small round bumps similar in colour to surrounding skin" width="150" height="100">
+          <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">2</div>
+        </button>
+
+        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-C.png" alt="Stage 1 of the chickenpox rash on light brown skin. The spots are raised red bumps. The skin surrounding most spots looks red" width="150" height="100">
+          <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">3</div>
+        </button>
+    </div>
+  
+    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" role="tabpanel">
         <img class="nhsuk-image__img" src="/images/S1-A.png" alt="Stage 1 of the chickenpox rash on white skin. Spots are red and some have a bump in the centre. The skin surrounding most spots looks red">
-        <figcaption class="nhsuk-image-proto-4__caption">
-
+        <figcaption class="nhsuk-image-proto__caption">
+          <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 1 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is an image of the chickenpox rash on light brown skin.</p>
+              <p class="nhsuk-details__content">There are about 40 spots on someone’s chest and on a small part of their upper arm.</p>
+              <p class="nhsuk-details__content">Most spots are flat, less than 5mm across and have dark red scabs. The skin around the scabs looks pink. Some spots are 1cm to 3cm apart, some are further apart.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-2" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
         <img class="nhsuk-image__img" src="/images/S1-B.png" alt="Stage 1 of the chickenpox rash on light brown skin. Spots are small round bumps similar in colour to surrounding skin">
-        <figcaption class="nhsuk-image-proto-4__caption">
-
-
+        <figcaption class="nhsuk-image-proto__caption">
+          <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 2 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is an image of the chickenpox rash on light brown skin.</p>
+              <p class="nhsuk-details__content">There are about 40 spots on someone’s chest and on a small part of their upper arm.</p>
+              <p class="nhsuk-details__content">Most spots are flat, less than 5mm across and have dark red scabs. The skin around the scabs looks pink. Some spots are 1cm to 3cm apart, some are further apart.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-3" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
         <img class="nhsuk-image__img" src="/images/S1-C.png" alt="Stage 1 of the chickenpox rash on light brown skin. The spots are raised red bumps. The skin surrounding most spots looks red">
-        <figcaption class="nhsuk-image-proto-4__caption">
-
-
+        <figcaption class="nhsuk-image-proto__caption">
+          <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 3 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is an image of the chickenpox rash on light brown skin.</p>
+              <p class="nhsuk-details__content">There are about 40 spots on someone’s chest and on a small part of their upper arm.</p>
+              <p class="nhsuk-details__content">Most spots are flat, less than 5mm across and have dark red scabs. The skin around the scabs looks pink. Some spots are 1cm to 3cm apart, some are further apart.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
 
 
     <!-- Just need to make sure the 'aria-controls' section matches the 'id' of the figures above -->
-    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list" aria-label="Image gallery">
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab nhsuk-gallery-image-thumbnail_selected" aria-selected="true" aria-controls="gallery-prototype-image-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-A.png" alt="Stage 1 of the chickenpox rash on white skin. Spots are red and some have a bump in the centre. The skin surrounding most spots looks red " width="150" height="100">
-        </button>
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-B.png" alt="Stage 1 of the chickenpox rash on light brown skin. Spots are small round bumps similar in colour to surrounding skin" width="150" height="100">
-        </button>
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-C.png" alt="Stage 1 of the chickenpox rash on light brown skin. The spots are raised red bumps. The skin surrounding most spots looks red" width="150" height="100">
-        </button>
-    </div>
 </div>
 
 <h4>Stage 2. The spots become blisters</h4>
@@ -103,62 +143,106 @@
 <!-- Hey Cameron, make sure it says first or second in this class below -->
 <div class="nhsuk-gallery-wrapper parent second" role="region" aria-label="Image gallery">
 
+  <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2">
 
-    <figure id="gallery-prototype-image-1" class="Nhsuk-gallery-image-proto-4" role="tabpanel">
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-1">
+        <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. Spots are red and most have a yellow and pink scab. Some scabs are flaky, others have fluid under them." width="150" height="100">
+        <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">1</div>
+      </button>
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
+        <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-B.png" alt="Stage 3 of chickenpox on the chest and arm of a person with light brown skin. Most spots are flat with a dark red scab." width="150" height="100">
+        <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">2</div>
+      </button>
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
+        <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-C.png" alt="Stage 3 of the chickenpox rash on medium brown skin. Most spots have scabs, which are pink, purple or grey." width="150" height="100">
+        <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">3</div>
+      </button>
+
+      <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-4" tabindex="-1">
+        <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-D.png" alt="Stage 3 of the chickenpox rash on dark brown skin. Most spots have raised scabs, which are darker than surrounding skin or grey. " width="150" height="100">
+        <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">4</div>
+      </button>
+  </div>
+
+    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" role="tabpanel">
         <img class="nhsuk-image__img" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. Spots are red and most have a yellow and pink scab. Some scabs are flaky, others have fluid under them.">
-        <figcaption class="nhsuk-image-proto-4__caption">
-            <p class="nhsuk-image__caption_link">
-                <a href="/LD/S3-A">Image 1 description</a>
-            </p>
+        <figcaption class="nhsuk-image-proto__caption">
+        <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 1 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is a close-up image of chickenpox spots on white skin. You cannot tell what part of the body is shown.</p>
+              <p class="nhsuk-details__content">There are about 10 spots that vary in size from about 1mm to 1cm Some spots are close together.</p>
+              <p class="nhsuk-details__content">Some of the bigger spots are raised and have scabs over them. The scabs are yellow and pink and the skin around the scab is pink. Some scabs look soft and seem to be filled with fluid.</p>
+              <p class="nhsuk-details__content">The smaller spots look like tiny pink blisters.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-2" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
         <img class="nhsuk-image__img" src="/images/S3-B.png" alt="Stage 3 of chickenpox on the chest and arm of a person with light brown skin. Most spots are flat with a dark red scab.">
-        <figcaption class="nhsuk-image-proto-4__caption">
-            <p class="nhsuk-image__caption_link">
-                <a href="/LD/S3-B">Image 2 description</a>
-            </p>
+        <figcaption class="nhsuk-image-proto__caption">
+          <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 2 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is an image of the chickenpox rash on light brown skin.</p>
+              <p class="nhsuk-details__content">There are about 40 spots on someone’s chest and on a small part of their upper arm.</p>
+              <p class="nhsuk-details__content">Most spots are flat, less than 5mm across and have dark red scabs. The skin around the scabs looks pink. Some spots are 1cm to 3cm apart, some are further apart.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-3" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
         <img class="nhsuk-image__img" src="/images/S3-C.png" alt="Stage 3 of the chickenpox rash on medium brown skin. Most spots have scabs, which are pink, purple or grey.">
-        <figcaption class="nhsuk-image-proto-4__caption">
-            <p class="nhsuk-image__caption_link">
-                <a href="/LD/S3-C">Image 3 description</a>
-            </p>
+        <figcaption class="nhsuk-image-proto__caption">
+          <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 3 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is an image of the chickenpox rash on medium brown skin.</p>
+              <p class="nhsuk-details__content">The image shows chickenpox spots all over the lower half of someone’s back and the side of their hip. There are about 50 spots in total, varying in size from about 1mm to 1cm. Some are 1cm to 3cm apart, but others are further apart.</p>
+              <p class="nhsuk-details__content">Most of the spots have scabs.  The scabs vary in colour from pink and purple to grey.</p>
+              <p class="nhsuk-details__content">There are also a few spots without scabs that look more like small blisters. These are slightly darker in colour than the surrounding skin.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-4" class="Nhsuk-gallery-image-proto-4" role="tabpanel" hidden="">
+    <figure id="gallery-prototype-image-4" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
         <img class="nhsuk-image__img" src="/images/S3-D.png" alt="Stage 3 of the chickenpox rash on dark brown skin. Most spots have raised scabs, which are darker than surrounding skin or grey.">
-        <figcaption class="nhsuk-image-proto-4__caption">
-            <p class="nhsuk-image__caption_link">
-                <a href="/LD/S3-D">Image 4 description</a>
-            </p>
-
+        <figcaption class="nhsuk-image-proto__caption">
+          <div class="caption-text">This is a caption describing the image</div>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Detailed image 4 description
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-details__content">This is a close-up image of the chickenpox rash on dark brown skin.  It’s unclear what body part is being shown.</p>
+              <p class="nhsuk-details__content">The whole area is covered in spots, most are 2mm to 4mm across.  Some spots are joined together, others are 1cm to 3cm apart.</p>
+              <p class="nhsuk-details__content">Most spots are raised and have scabs over them., which are a darker shade of brown than the surrounding skin. Some of the scabs look grey. There are also some smaller spots which are not scabbed over.</p>
+            </div>
+          </details>
         </figcaption>
     </figure>
-
-    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list" aria-label="Image gallery">
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab nhsuk-gallery-image-thumbnail_selected" aria-selected="true" aria-controls="gallery-prototype-image-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. Spots are red and most have a yellow and pink scab. Some scabs are flaky, others have fluid under them." width="150" height="100">
-        </button>
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-B.png" alt="Stage 3 of chickenpox on the chest and arm of a person with light brown skin. Most spots are flat with a dark red scab." width="150" height="100">
-        </button>
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-C.png" alt="Stage 3 of the chickenpox rash on medium brown skin. Most spots have scabs, which are pink, purple or grey." width="150" height="100">
-        </button>
-
-        <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-4" tabindex="-1">
-            <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-D.png" alt="Stage 3 of the chickenpox rash on dark brown skin. Most spots have raised scabs, which are darker than surrounding skin or grey. " width="150" height="100">
-        </button>
-    </div>
       <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
 
     <!-- Just need to make sure the 'aria-controls' section matches the 'id' of the figures above -->
