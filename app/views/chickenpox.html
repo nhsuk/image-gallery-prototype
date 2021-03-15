@@ -19,6 +19,36 @@
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+
+
+
+<li class="nhsuk-breadcrumb__item">
+  <a href="/" class="nhsuk-breadcrumb__link">Home</a>
+</li>
+
+
+
+
+<li class="nhsuk-breadcrumb__item">
+  <a href="/conditions/" class="nhsuk-breadcrumb__link">Health A to Z</a>
+</li>
+
+
+      </ol>
+
+      <p class="nhsuk-breadcrumb__back">
+
+
+
+<a href="/conditions/" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
+
+
+      </p>
+    </div>
+  </nav>
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -68,7 +98,7 @@
           <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">3</div>
         </button>
     </div>
-  
+
     <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" role="tabpanel">
         <img class="nhsuk-image__img" src="/images/S1-A.png" alt="Stage 1 of the chickenpox rash on white skin. Spots are red and some have a bump in the centre. The skin surrounding most spots looks red">
         <figcaption class="nhsuk-image-proto__caption">
