@@ -1,106 +1,10 @@
-// ES6 or Vanilla JavaScript
-
-
-/* functions for gallery 1*/
-var firstGallery = document.querySelector(".first");
-var firstButtons =  firstGallery.querySelectorAll(".nhsuk-gallery-button");
-
-function swapSelected(currentSelected) {
-
-    firstButtons.forEach(function (item) {
-        
-        if (currentSelected == item) {
-
-            currentSelected.classList.add("nhsuk-gallery-image-thumbnail_selected");
-
-            currentSelected.setAttribute("aria-pressed", "true");
-
-        } else {
-
-            item.classList.remove("nhsuk-gallery-image-thumbnail_selected");
-
-            item.setAttribute("aria-pressed", "false");
-        }
-    });
-}
-
-firstButtons.forEach(item =>
-
-    item.addEventListener("click", function (e) {
-
-        swapSelected(e.target);
-
-        updateWithSelectedImage(e.target.firstChild.nextSibling, firstGallery);
-    })
-);
-
-/* common functions */
-function updateWithSelectedImage(selectedImageElem, div) {
-
-    let targetElem = div.querySelector(".nhsuk-galley-image-target");
-
-    // let captionTargetElem = div.querySelector(".nhsuk-gallery-caption-target");
-
-    let descriptionLink = div.querySelector(".nhsuk-gallery-unique-description-target");
-
-    targetElem.src = selectedImageElem.src;
-
-    targetElem.alt = selectedImageElem.alt;
-
-    // Needed because prototype 2 doesnt have the caption text
-    // if (captionTargetElem != null) {
-    //     captionTargetElem.textContent = selectedImageElem.alt;
-    // }
-
-    if (selectedImageElem.dataset.descriptionname != null) {
-        descriptionLink.textContent = selectedImageElem.dataset.descriptionname;
-    }
-
-
-    descriptionLink.href = selectedImageElem.dataset.descriptionpage;
-
-}
-
-
-/* functions for gallery 2*/
-var secondGallery = document.querySelector(".second");
-var secondButtons =  secondGallery.querySelectorAll(".nhsuk-gallery-button");
-
-function swapSelected2(currentSelected) {
-
-    secondButtons.forEach(function (item) {
-        
-        if (currentSelected == item) {
-
-            currentSelected.classList.add("nhsuk-gallery-image-thumbnail_selected");
-
-            currentSelected.setAttribute("aria-pressed", "true");
-
-        } else {
-
-            item.classList.remove("nhsuk-gallery-image-thumbnail_selected");
-
-            item.setAttribute("aria-pressed", "false");
-        }
-    });
-}
-
-secondButtons.forEach(item =>
-
-    item.addEventListener("click", function (e) {
-
-        swapSelected2(e.target);
-
-        updateWithSelectedImage(e.target.firstChild.nextSibling, secondGallery);
-    })
-);
-
-
-
 /*
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 */
+var firstGallery = document.querySelector(".first");
+var secondGallery = document.querySelector(".second");
+
 function tabsGallery(galleryDiv) {
     var tablist = galleryDiv.querySelectorAll('[role="tablist"]')[0];
     var tabs;
@@ -117,7 +21,24 @@ function tabsGallery(galleryDiv) {
     function randomSelect(){
         var len = tabs.length;
         var ran = Math.floor(Math.random() * len);
-        activateTab(tabs[ran])
+
+        deactivateTabs();
+
+        // Remove tabindex attribute
+        tabs[ran].setAttribute('tabindex', '0');
+
+        // Set the tab as selected
+        tabs[ran].setAttribute('aria-selected', 'true');
+
+        // Apply the selected class
+        tabs[ran].classList.add("nhsuk-gallery-image-thumbnail_selected");
+
+        // Get the value of aria-controls (which is an ID)
+        var controlsID = tabs[ran].getAttribute('aria-controls');
+        var imageID = "#".concat(controlsID);
+
+        // Remove hidden attribute from tab panel to make it visible
+        galleryDiv.querySelector(imageID).removeAttribute('hidden');
     };
 
     randomSelect();
@@ -298,6 +219,13 @@ function tabsGallery(galleryDiv) {
         };
 
         for (let p = 0; p < panels.length; p++) {
+            const sumamry = panels[p].querySelector(".nhsuk-details__summary");
+            const details = panels[p].querySelector("details");
+            const openAttr = details.getAttribute("open") !== null;
+            if (openAttr === true) {
+                sumamry.click();
+            }
+
             panels[p].setAttribute('hidden', 'hidden');
         };
     };
