@@ -276,3 +276,5 @@ function tabsGallery(galleryDiv) {
 }
 tabsGallery(firstGallery);
 tabsGallery(secondGallery);
+var thirdGallery = document.querySelector(".third");
+tabsGallery(thirdGallery); 
