@@ -4,6 +4,7 @@
 */
 var firstGallery = document.querySelector(".first");
 var secondGallery = document.querySelector(".second");
+var thirdGallery = document.querySelector(".third");
 
 function tabsGallery(galleryDiv) {
     var tablist = galleryDiv.querySelectorAll('[role="tablist"]')[0];
@@ -276,5 +277,4 @@ function tabsGallery(galleryDiv) {
 }
 tabsGallery(firstGallery);
 tabsGallery(secondGallery);
-var thirdGallery = document.querySelector(".third");
 tabsGallery(thirdGallery); 
