@@ -85,13 +85,9 @@
 }
 
 .caption-text{
-    @include nhsuk-typography-responsive(16);
     padding-bottom: nhsuk-spacing(3);
 }
 
-.nhsuk-details{
-    @include nhsuk-typography-responsive(16);
-}
 .nhsuk-details__summary {
     padding-left: 20px;
     &:before {
@@ -105,9 +101,6 @@
       @include govuk-shape-arrow($direction: right, $base: 12px);
   
     }
-}
-.nhsuk-details__content{
-    @include nhsuk-typography-responsive(16);
 }
 
 .nhsuk-gallery-image-proto {
