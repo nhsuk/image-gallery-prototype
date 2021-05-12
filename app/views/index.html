@@ -3,6 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
+{% from 'action-link/macro.njk' import actionLink %}
 {% extends 'layout.html' %}
 <!--
   In /views/layout.html you can:
@@ -32,15 +33,16 @@
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-      {% from 'action-link/macro.njk' import actionLink %}
 
       {{ actionLink({
-        "text": "Prototype",
+        "text": "Automatic",
         "href": "/chickenpox"
       }) }}
 
-      {% from 'action-link/macro.njk' import actionLink %}
-
+      {{ actionLink({
+        "text": "Manual",
+        "href": "/chickenpox-manual"
+      }) }}
 
 
       <!-- End of content -->
