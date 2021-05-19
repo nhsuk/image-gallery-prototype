@@ -86,6 +86,7 @@
 
 .caption-text{
     padding-bottom: nhsuk-spacing(3);
+    @include nhsuk-typography-responsive(19);
 }
 
 .nhsuk-details__summary {
