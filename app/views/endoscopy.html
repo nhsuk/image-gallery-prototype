@@ -1,0 +1,124 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+{% from 'details/macro.njk' import details %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Endoscopy - NHS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+<!-- Change the page title here -->
+
+<h1>Endoscopy</h1>
+
+
+  <section>
+
+        <p><strong>An endoscopy is a procedure where organs inside your body are looked at using an instrument called an endoscope.</strong></p>
+<p>An endoscope is a long, thin, flexible tube that has a light and camera at one end. Images of the inside of your body are shown on a television screen.</p>
+
+<figure class="nhsuk-image">
+  <img class="nhsuk-image__img" src="https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-320.jpg" sizes="
+      (min-width: 1020px) 320px
+      (min-width: 768px) 50vw
+      100vw
+    " srcset="
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-320.jpg 320w,
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-510.jpg 510w,
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-640.jpg 640w,
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-767.jpg 767w,
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-1019.jpg 1019w,
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-1125.jpg 1125w,
+      https://assets.nhs.uk/nhsuk-cms/images/ADTYWB.width-1534.jpg 1534w,
+    " alt="Diagram showing an endoscopy">
+
+
+
+  <div class="nhsuk-u-visually-hidden" aria-hidden="true">
+    Credit:
+  </div>
+
+</figure>
+
+
+        <p>Endoscopes can be put into the body through the mouth and down the throat, or through the bottom.</p>
+<p>An endoscope can also be put inside the body through a small&nbsp;cut (incision) made in the skin when keyhole surgery is being done.</p>
+
+
+  </section>
+
+
+
+
+
+
+  <section>
+
+
+        <h2>When an endoscopy is used</h2>
+<p>An endoscopy can be used to:</p>
+<ul>
+<li>investigate unusual symptoms </li>
+<li>help perform certain types of surgery </li>
+</ul>
+<p>An endoscope can also be used to remove a small sample of tissue to be looked at more closely. This is called a <a href="/conditions/biopsy/">biopsy</a>.</p>
+
+        <h2>What happens during an endoscopy</h2>
+
+<h3>During an endoscopy procedure</h3>
+<p>An endoscopy is not usually painful, but it can be uncomfortable. Most people only have mild discomfort, similar to&nbsp;<a href="/conditions/indigestion/">indigestion</a> or a sore throat.</p>
+<p>The procedure is usually done while you're awake. You may be given a <a href="/conditions/local-anaesthesia/">local anaesthetic</a> to numb a specific area of your body. This may be in the form of a spray or lozenge to&nbsp;numb your throat, for example.</p>
+<p>You may also be&nbsp;offered a sedative to help you relax and make you less aware of what's going on around you.</p>
+<p>The endoscope will be carefully&nbsp;put into your body. Depending on the part of your body being looked at, it may be put into your:</p>
+<ul>
+<li>mouth and down your throat </li>
+<li>bottom (anus)</li>
+<li>urethra&nbsp;– the tube&nbsp;that you pee through </li>
+</ul>
+<p>An endoscopy usually takes between 15 and 45 minutes, depending on what it's being used for.&nbsp;You can usually go home the same day and do not have to stay in hospital overnight.</p>
+
+<div class="nhsuk-review-date">
+  <p class="nhsuk-body-s">
+    Page last reviewed: 18 December 2019<br>
+    Next review due: 18 December 2022
+  </p>
+</div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+  </article>
+
+
+
+
+
+      </main>
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}

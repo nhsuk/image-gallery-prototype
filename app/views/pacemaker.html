@@ -1,0 +1,85 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+{% from 'details/macro.njk' import details %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Pacemaker implanation - Overview - NHS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+<!-- Change the page title here -->
+
+<h1>
+  <span role="text">Overview
+    <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+      <span class="nhsuk-u-visually-hidden"> - </span>
+      Pacemaker implantation
+    </span>
+  </span>
+</h1>
+
+<p>A pacemaker is a small device that sends electrical signals to your heart to help it beat regularly.</p>
+<p>Fitting a pacemaker (called implantation) is a very common type of heart surgery.</p>
+<p>A pacemaker can greatly improve your quality of life if you have problems with your heart, like slow or irregular heartbeats. It can also be lifesaving if you have a high chance of a cardiac arrest or some types of heart disease.</p>
+<h2>What pacemaker are used for</h2>
+<p>Your heart is a muscle that’s controlled by electrical signals. Sometimes these signals are not received properly, which means the heart cannot beat normally.</p>
+<p>Heart conditions that may be helped by a pacemaker include:</p> <ul>
+<li>a heart that beats too slowly (bradycardia)</li>
+<li>a heart that beats too fast (tachycardia)</li>
+<li>irregular heartbeats (a heart block)</li>
+<li>cardiac arrest, which is when the heart stops beating completely</li>
+</ul>
+
+<h2>How a pacemaker is implanted</h2>
+<p>The operation to implant a pacemaker is done by a heart surgeon.</p>
+<p>It's usually done using local anaesthetic, which means you'll be awake during the procedure but will not feel any pain.</p>
+<p>The pacemaker is usually placed under your skin near your collarbone, on the left side of your chest. The wires that are attached to the device are then guided through a blood vessel to your heart.</p>
+<p>You will probably be in the operating theatre for around 1 hour, and most people are able to leave hospital on the same day, or on the following day.</p>
+
+
+
+<div class="nhsuk-review-date">
+  <p class="nhsuk-body-s">
+    Page last reviewed: 18 December 2019<br>
+    Next review due: 18 December 2022
+  </p>
+</div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+  </article>
+
+
+
+
+
+      </main>
+
+<!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
