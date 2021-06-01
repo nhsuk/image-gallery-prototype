@@ -79,7 +79,7 @@
 <div class="nhsuk-gallery-wrapper parent first" role="region" aria-label="Here is an image gallery with images and detailed descriptions. Select an image tab to get the bigger version of the image and to access the description.">
 
     <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
-    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2 auto" aria-label="Image gallery">
+    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2" aria-label="Image gallery">
 
         <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-1" tabindex="-1">
           <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S1-A.png" alt="1.	White skin with stage 1 of the chickenpox rash." width="150" height="100">
@@ -97,8 +97,8 @@
         </button>
     </div>
 
-    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" role="tabpanel">
-        <img class="nhsuk-image__img" src="/images/S1-A.png" alt="Stage 1 of chickenpox on white skin. Spots are red and pink, and less than 1cm in size. Some are raised but others are flat.">
+    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" aria-controls="image-1" role="tabpanel">
+        <img class="nhsuk-image__img" id="image-1" tabindex="-1" src="/images/S1-A.png" alt="Stage 1 of chickenpox on white skin. Spots are red and pink, and less than 1cm in size. Some are raised but others are flat.">
         <figcaption class="nhsuk-image-proto__caption">
           <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
@@ -115,8 +115,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S1-B.png" alt="Stage 1 of chickenpox on light brown skin. Spots are red or pink. Some are raised while others are flat.">
+    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" aria-controls="image-2" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-2" tabindex="-1" src="/images/S1-B.png" alt="Stage 1 of chickenpox on light brown skin. Spots are red or pink. Some are raised while others are flat.">
         <figcaption class="nhsuk-image-proto__caption">
 
           <details class="nhsuk-details">
@@ -132,8 +132,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S1-C.png" alt="Stage 1 of chickenpox on light brown skin. Spots are pink or skin colour. Some are raised while others are flatter.">
+    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" aria-controls="image-3" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-3" tabindex="-1" src="/images/S1-C.png" alt="Stage 1 of chickenpox on light brown skin. Spots are pink or skin colour. Some are raised while others are flatter.">
         <figcaption class="nhsuk-image-proto__caption">
 
           <details class="nhsuk-details">
@@ -163,31 +163,31 @@
 <div class="nhsuk-gallery-wrapper parent second" role="region" aria-label="Here is an image gallery with multiple images and detailed descriptions. Select an image tab to get the bigger version of the image and to access the description.">
 
     <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
-    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2 auto" aria-label="Image gallery">
+    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2" aria-label="Image gallery">
 
         <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-1" tabindex="-1">
-          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-D.png" alt="1.	Dark brown skin with stage 2 of the chickenpox rash." width="150" height="100">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-A.png" alt="1.	Dark brown skin with stage 2 of the chickenpox rash." width="150" height="100">
           <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">1</div>
         </button>
 
         <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-2" tabindex="-1">
-          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-C.png" alt="2.	Medium brown skin with stage 2 of the chickenpox rash." width="150" height="100">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-B.png" alt="2.	Medium brown skin with stage 2 of the chickenpox rash." width="150" height="100">
           <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">2</div>
         </button>
 
         <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-3" tabindex="-1">
-          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-B.png" alt="3.	Light brown skin with stage 2 of the chickenpox rash." width="150" height="100">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-C.png" alt="3.	Light brown skin with stage 2 of the chickenpox rash." width="150" height="100">
           <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">3</div>
         </button>
 
         <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-4" tabindex="-1">
-          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-A.png" alt="4.	White skin with stage 2 of the chickenpox rash." width="150" height="100">
+          <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S2-D.png" alt="4.	White skin with stage 2 of the chickenpox rash." width="150" height="100">
           <div class="image-number nhsuk-u-font-size-14" aria-hidden="true">4</div>
         </button>
     </div>
 
-    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" role="tabpanel">
-        <img class="nhsuk-image__img" src="/images/S2-D.png" alt="Stage 2 of chickenpox, dark brown skin. Most spots are raised blisters. A more detailed image description is available next.">
+    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" aria-controls="image-1" role="tabpanel">
+        <img class="nhsuk-image__img" id="image-1" tabindex="-1" src="/images/S2-A.png" alt="Stage 2 of chickenpox on white skin. Select the button below called detailed description of image 1 to learn more.">
         <figcaption class="nhsuk-image-proto__caption">
 
           <details class="nhsuk-details">
@@ -205,8 +205,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S2-C.png" alt="Stage 2 chickenpox, medium brown skin. Blisters are pink or skin colour. A more detailed image description is available next.>"
+    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" aria-controls="image-2" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-2" tabindex="-1" src="/images/S2-B.png" alt="Stage 2 of chickenpox on light brown skin. Select the button below called detailed description of image 2 to learn more.">
         <figcaption class="nhsuk-image-proto__caption">
 
           <details class="nhsuk-details">
@@ -223,8 +223,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S2-B.png" alt="Stage 2 of chickenpox on light brown skin. Blisters are pink and white. A more detailed image description is available next."">
+    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" aria-controls="image-3" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-3" tabindex="-1" src="/images/S2-C.png" alt="Stage 2 of chickenpox on medium brown skin. Select the button below called detailed description of image 3 to learn more.">
         <figcaption class="nhsuk-image-proto__caption">
 
           <details class="nhsuk-details">
@@ -242,8 +242,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-4" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S2-A.png" alt="Stage 2 of chickenpox on white skin. Blisters are pink and shiny. A more detailed image description is available next.">
+    <figure id="gallery-prototype-image-4" class="nhsuk-gallery-image-proto" aria-controls="image-4" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-4" tabindex="-1" src="/images/S2-D.png" alt="Stage 2 of chickenpox on white skin. Blisters are pink and shiny. A more detailed image description is available next.">
         <figcaption class="nhsuk-image-proto__caption">
 
           <details class="nhsuk-details">
@@ -270,7 +270,7 @@
 <div class="nhsuk-gallery-wrapper parent third" role="region" aria-label="Here is an image gallery with multiple images and detailed descriptions. Select an image tab to get the bigger version of the image and to access the description.">
 
     <!-- https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html -->
-    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2 auto" aria-label="Image gallery">
+    <div role="tablist" class="nhsuk-list nhsuk-gallery-image-thumbnail_list child child-2" aria-label="Image gallery">
 
         <button role="tab" type="button" class="nhsuk-gallery-button-tab" aria-selected="false" aria-controls="gallery-prototype-image-1" tabindex="-1">
           <img class="nhsuk-gallery-image-thumbnail_img" src="/images/S3-A.png" alt="1.	White skin with stage 3 of the chickenpox rash." width="150" height="100">
@@ -289,8 +289,8 @@
 
     </div>
 
-    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" role="tabpanel">
-        <img class="nhsuk-image__img" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. A detailed description of this image is available next.">
+    <figure id="gallery-prototype-image-1" class="nhsuk-gallery-image-proto" aria-controls="image-1" role="tabpanel">
+        <img class="nhsuk-image__img" id="image-1" tabindex="-1" src="/images/S3-A.png" alt="Stage 3 of chickenpox on white skin. A detailed description of this image is available next.">
         <figcaption class="nhsuk-image-proto__caption">
           <div class="caption-text">Stage 3 of the chickenpox rash on white skin</div>
           <details class="nhsuk-details">
@@ -308,8 +308,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S3-B.png" alt="Stage 3 of chickenpox on light brown skin. A detailed description of this image is available next.">
+    <figure id="gallery-prototype-image-2" class="nhsuk-gallery-image-proto" aria-controls="image-2" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-2" tabindex="-1" src="/images/S3-B.png" alt="Stage 3 of chickenpox on light brown skin. A detailed description of this image is available next.">
         <figcaption class="nhsuk-image-proto__caption">
           <div class="caption-text">Stage 3 of the chickenpox rash on light brown skin</div>
           <details class="nhsuk-details">
@@ -326,8 +326,8 @@
         </figcaption>
     </figure>
 
-    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" role="tabpanel" hidden="">
-        <img class="nhsuk-image__img" src="/images/S3-C.png" alt="Stage 3 of chickenpox on medium brown skin. A detailed description of this image is available next.">
+    <figure id="gallery-prototype-image-3" class="nhsuk-gallery-image-proto" aria-controls="image-3" role="tabpanel" hidden="">
+        <img class="nhsuk-image__img" id="image-3" tabindex="-1" src="/images/S3-C.png" alt="Stage 3 of chickenpox on medium brown skin. A detailed description of this image is available next.">
         <figcaption class="nhsuk-image-proto__caption">
           <div class="caption-text">Stage 3 of the chickenpox rash on medium brown skin</div>
           <details class="nhsuk-details">

@@ -389,7 +389,12 @@ function manualGallery(galleryDiv) {
                 break;
             case keys.enter:
             case keys.space:
-                activateTab(event.target);
+                try{
+                    activateTab(event.target, true);
+                }
+                catch(err){
+                    break;
+                }
                 break;
         };
     };
@@ -451,8 +456,7 @@ function manualGallery(galleryDiv) {
     };
 
     // Activates any given tab panel
-    function activateTab(tab, setFocus) {
-        setFocus = setFocus || true;
+    function activateTab(tab, key) {
         // Deactivate all other tabs
         deactivateTabs();
 
@@ -472,10 +476,12 @@ function manualGallery(galleryDiv) {
         // Remove hidden attribute from tab panel to make it visible
         galleryDiv.querySelector(imageID).removeAttribute('hidden');
 
-        // Set focus when required
-        if (setFocus) {
-            tab.focus();
-        };
+        if (key){
+            var figureControls = galleryDiv.querySelector(imageID).getAttribute('aria-controls');
+            var figureID = "#".concat(figureControls);
+    
+            galleryDiv.querySelector(figureID).focus();
+        }
     };
 
     // Deactivate all tabs and tab panels
@@ -496,34 +502,6 @@ function manualGallery(galleryDiv) {
 
             panels[p].setAttribute('hidden', 'hidden');
         };
-    };
-
-    // Determine whether there should be a delay
-    // when user navigates with the arrow keys
-    function determineDelay() {
-
-        // Needed here because prototype 1 and 2 are not tabs
-        if (typeof(tablist) == "undefined") {
-
-            return 300;
-        }
-
-        var hasDelay = tablist.hasAttribute('data-delay');
-
-        var delay = 0;
-
-        if (hasDelay) {
-            var delayValue = tablist.getAttribute('data-delay');
-            if (delayValue) {
-                delay = delayValue;
-            }
-            else {
-                // If no value is specified, default to 300ms
-                delay = 300;
-            };
-        };
-
-        return delay;
     };
 }
 //
